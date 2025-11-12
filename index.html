@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0f172a" />
   <title>Project Studio — your-username</title>
-  <meta name="description" content="Project Studio — portfolio, visualizations and project links. Mobile-first, interactive landing page for GitHub Pages." />
+  <meta name="description" content="Project Studio — portfolio, visualizations and project links. A colourful, modern landing page template for GitHub Pages." />
 
-  <!-- Performance: preconnect to fonts -->
+  <!-- Performance: preconnect to fonts (optional) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 
@@ -40,8 +40,7 @@
       </div>
 
       <nav class="nav" role="navigation" aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-        <ul id="main-nav" class="nav-list">
+        <ul>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#visualizations">Visualizations</a></li>
           <li><a href="#about">About</a></li>
@@ -53,51 +52,55 @@
   </header>
 
   <main id="main">
-    <section class="hero section" data-bg="none" id="hero">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1>Build in public. Share your thinking.</h1>
-          <p class="lead">A mobile-first, colorful landing template focused on project storytelling and clear, interactive visualizations optimized for GitHub Pages.</p>
+          <p class="lead">A modern, colorful landing page template for presenting projects, interactive visualizations, and curated links — optimized for GitHub Pages.</p>
 
           <div class="hero-actions">
             <a class="primary" href="#projects">Explore projects</a>
             <a class="ghost" href="#visualizations">View visualizations</a>
           </div>
 
+          <ul class="meta-list" aria-hidden="true">
+            <li><strong>6</strong> Project categories</li>
+            <li><strong>24</strong> Sample projects</li>
+            <li><strong>100%</strong> Static &amp; fast</li>
+          </ul>
         </div>
 
         <aside class="hero-visual" aria-hidden="true">
-          <!-- compact, mobile-friendly illustration -->
+          <!-- Illustration: CSS-only grid of cards to indicate dynamic content -->
           <div class="visual-grid">
-            <div class="viz-card large">Interactive Canvas</div>
-            <div class="viz-card small">Data Viz</div>
-            <div class="viz-card medium">Model Output</div>
+            <div class="viz-card large">Interactive<br>Canvas</div>
+            <div class="viz-card small">Data<br>Viz</div>
+            <div class="viz-card medium">Model<br>Output</div>
             <div class="viz-card small">Prototype</div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="projects" class="section projects" data-bg="gradient">
+    <section id="projects" class="section projects">
       <div class="container">
         <div class="section-head">
           <h2>Projects</h2>
-          <p class="section-intro">Project cards with metrics, quick links and small inline visualizations that show real-world analytics at a glance.</p>
+          <p class="section-intro">Modular cards for quick scanning and deep dives. Each card contains a summary, tech tags, links and a compact visualization placeholder.</p>
         </div>
 
         <div class="projects-grid" role="list">
-          <!-- Project card template -->
+          <!-- Project card template (duplicate for your projects) -->
           <article role="listitem" class="project-card">
             <div class="card-media" aria-hidden="true">
-              <!-- sparkline + small bar chart as inline SVG (mobile-friendly) -->
-              <svg class="chart-spark" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true">
-                <polyline fill="none" stroke="#6b8cff" stroke-width="2" points="0,30 15,22 30,26 45,12 60,18 75,8 90,14 105,6 120,10" />
+              <svg viewBox="0 0 120 80" preserveAspectRatio="xMidYMid slice">
+                <rect width="120" height="80" rx="6" fill="rgba(0,0,0,0.05)"/>
+                <text x="10" y="42" font-size="12" fill="#333">Visualization placeholder</text>
               </svg>
             </div>
-
             <div class="card-body">
               <h3 class="card-title">Wildfire Spread Visualizer</h3>
-              <p class="card-desc">Time-series heatmap demonstrating probable spread using meteorological and topographic inputs. Includes a small performance sparkline and key KPI badges.</p>
+              <p class="card-desc">A time-series driven heatmap showing probable fire spread using meteorological and topographic inputs. Built with Python (xgboost) and D3 for client-side playback.</p>
 
               <div class="card-meta">
                 <div class="tags">
@@ -111,48 +114,42 @@
                   <a href="#" class="link">Repo</a>
                 </div>
               </div>
-
-              <div class="card-kpis">
-                <div class="kpi"><strong>≈</strong><span>0.87 AUC</span></div>
-                <div class="kpi"><strong>12k</strong><span>Sim frames</span></div>
-                <div class="kpi"><strong>Avg</strong><span>0.9s/frame</span></div>
-              </div>
-
             </div>
           </article>
 
-          <!-- Another card with a small heatmap preview rendered in canvas -->
+          <!-- Repeat cards (3 shown for example) -->
           <article role="listitem" class="project-card">
-            <div class="card-media small" aria-hidden="true">
-              <canvas class="heatmap-thumb" width="240" height="120" aria-hidden="true"></canvas>
-            </div>
+            <div class="card-media small" aria-hidden="true"></div>
             <div class="card-body">
-              <h3 class="card-title">Model Performance Dashboard</h3>
-              <p class="card-desc">Confusion matrices, ROC and feature importances — exportable to PNG. Snapshot shown here is synthetic but representative.</p>
+              <h3 class="card-title">Saxophone Quartet Transcription</h3>
+              <p class="card-desc">Custom transcriptions and PDFs for each part generated from a performance source. Includes part formatting and engraving notes.</p>
               <div class="card-meta">
-                <div class="tags"><span class="tag">Dashboard</span><span class="tag">Metrics</span></div>
-                <div class="links"><a href="#" class="link">Live</a><a href="#" class="link">Repo</a></div>
+                <div class="tags">
+                  <span class="tag">Music</span>
+                  <span class="tag">PDF</span>
+                </div>
+                <div class="links">
+                  <a href="#" class="link">Files</a>
+                  <a href="#" class="link">Notes</a>
+                </div>
               </div>
             </div>
           </article>
 
           <article role="listitem" class="project-card">
-            <div class="card-media medium" aria-hidden="true">
-              <!-- miniature bar chart -->
-              <svg viewBox="0 0 120 60" preserveAspectRatio="none" aria-hidden="true">
-                <rect x="8" y="18" width="12" height="42" rx="2" fill="#6b8cff" />
-                <rect x="30" y="8" width="12" height="52" rx="2" fill="#ff7a7a" />
-                <rect x="52" y="28" width="12" height="32" rx="2" fill="#ffd76b" />
-                <rect x="74" y="12" width="12" height="48" rx="2" fill="#6b8cff" />
-                <rect x="96" y="22" width="12" height="38" rx="2" fill="#ff7a7a" />
-              </svg>
-            </div>
+            <div class="card-media medium" aria-hidden="true"></div>
             <div class="card-body">
               <h3 class="card-title">Seed-Dispenser Drone Prototype</h3>
-              <p class="card-desc">Arduino-driven mechanism design for controlled seed release with timing analysis and weight-distribution charts.</p>
+              <p class="card-desc">Arduino-driven mechanism design for controlled seed release; explores power, timing and fabrication-free deployment ideas.</p>
               <div class="card-meta">
-                <div class="tags"><span class="tag">Hardware</span><span class="tag">Arduino</span></div>
-                <div class="links"><a href="#" class="link">Specs</a><a href="#" class="link">Repo</a></div>
+                <div class="tags">
+                  <span class="tag">Hardware</span>
+                  <span class="tag">Arduino</span>
+                </div>
+                <div class="links">
+                  <a href="#" class="link">Specs</a>
+                  <a href="#" class="link">Repo</a>
+                </div>
               </div>
             </div>
           </article>
@@ -165,63 +162,55 @@
       </div>
     </section>
 
-    <section id="visualizations" class="section visualizations" data-bg="particles">
+    <section id="visualizations" class="section visualizations">
       <div class="container">
         <div class="section-head">
           <h2>Visualizations</h2>
-          <p class="section-intro">Embed interactive charts and export-ready images. Below are representative placeholders that a data scientist would provide: a playback heatmap, ROC &amp; confusion preview, and an interactive feature importance bar.</p>
+          <p class="section-intro">Embed charts, interactive maps, and export-ready images. Each visualization card includes an explanation and a "how it works" collapsible.</p>
         </div>
 
         <div class="viz-grid">
           <div class="viz-card-panel">
-            <h3>Playback Heatmap (interactive)</h3>
-            <p class="muted">Client-side canvas playback synthesizing model frames. Controls let you scrub time and export frames.</p>
-            <div class="viz-canvas-wrap">
-              <canvas id="playback-canvas" width="600" height="300" aria-label="Playback heatmap" role="img"></canvas>
-              <div class="viz-controls">
-                <input id="playback-range" type="range" min="0" max="99" value="0" aria-label="Playback scrubber">
-                <button id="playback-play">Play</button>
-              </div>
-            </div>
+            <h3>Time-series Heatmap</h3>
+            <p class="muted">Animated playback with per-frame metadata. Good for modelling spread or progression.</p>
+            <div class="viz-placeholder">[Interactive visualization can be embedded here — iframe, D3, or canvas]</div>
             <details>
               <summary>How this was generated</summary>
-              <p>Frames are precomputed raster-like arrays (simulated here) and animated on a canvas with WebGL fallback planning. For GitHub Pages we do lighter CPU canvas animation.</p>
+              <p>Example: Aggregate raster outputs from the model, tile to a canvas, animate with WebGL for performance. Server precomputes frames to keep client light.</p>
             </details>
           </div>
 
           <div class="viz-card-panel">
-            <h3>ROC &amp; Model Summary</h3>
-            <p class="muted">Quick overview charts: ROC curve, confusion matrix snapshot, and export buttons.</p>
-            <svg class="mini-roc" viewBox="0 0 120 90" aria-hidden="true">
-              <rect width="120" height="90" rx="6" fill="#fff" stroke="#eee"/>
-              <path d="M8,82 C30,60 60,30 112,10" fill="none" stroke="#6b8cff" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+            <h3>Model Performance</h3>
+            <p class="muted">Confusion matrices, ROC, and feature importance widgets, exportable as PNG/SVG for reports.</p>
+            <div class="viz-placeholder small">[Chart area]</div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <section id="about" class="section about" data-bg="parallax">
+    <section id="about" class="section about">
       <div class="container">
         <h2>About this template</h2>
-        <p>This mobile-first template emphasizes accessible semantic markup, modular CSS, and interactive visual placeholders. Backgrounds on each major section become dynamic to reinforce the content and keep users engaged as they scroll.</p>
+        <p>This template focuses on accessible semantic markup, modular CSS, and clear project affordances. It's intentionally static-first for GitHub Pages but designed to accommodate frontend frameworks if you migrate later.</p>
 
         <div class="specs">
           <ul>
-            <li>Mobile-first responsive grid and touch-optimized controls</li>
-            <li>Three distinct background modes — animated gradient, particles canvas, parallax layers — tuned per section</li>
-            <li>Inline SVG / canvas placeholders for lightweight visualizations</li>
+            <li>Semantic HTML &amp; ARIA where needed</li>
+            <li>CSS variables and a small utility set for rapid edits</li>
+            <li>Mobile-first responsive grid</li>
+            <li>Optimized hero and card patterns for fast LCP</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact" data-bg="none">
+    <section id="contact" class="section contact">
       <div class="container contact-grid">
         <div>
           <h2>Contact / Deploy</h2>
-          <p class="muted">Push these files to <code>your-username.github.io</code> (main branch) and the site will be served automatically. For interactive visualizations, embed IFRAMES or client-side scripts in the placeholders.</p>
+          <p class="muted">Drop a link or instructions here for contributors. For GitHub Pages, push these files to <code>your-username.github.io</code> (main branch) and the site will be served automatically.</p>
         </div>
 
         <form class="contact-form" action="#" method="get" aria-label="Contact form">
@@ -253,152 +242,20 @@
     </div>
   </footer>
 
-  <!-- Inline script: background manager, canvas visualizations, mobile nav -->
+  <!-- Small inline script for year and focus handling (keeps no external deps) -->
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Keyboard focus indicator
+    // Simple keyboard focus enhancement for keyboard users
     (function(){
       const body = document.body;
-      function handleFirstTab(e){ if(e.key === 'Tab'){ body.classList.add('user-is-tabbing'); window.removeEventListener('keydown', handleFirstTab); }}
+      function handleFirstTab(e){
+        if(e.key === 'Tab'){
+          body.classList.add('user-is-tabbing');
+          window.removeEventListener('keydown', handleFirstTab);
+        }
+      }
       window.addEventListener('keydown', handleFirstTab);
-    }());
-
-    // Mobile nav toggle
-    (function(){
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('main-nav');
-      btn.addEventListener('click', ()=>{
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        nav.style.display = open ? '' : 'flex';
-      });
-    }());
-
-    // Background modes: gradient, particles (canvas), parallax layers
-    const bgManager = (function(){
-      const modes = {
-        none: ()=>{ document.body.classList.remove('bg-gradient','bg-particles','bg-parallax'); stopParticles(); },
-        gradient: ()=>{ document.body.classList.add('bg-gradient'); document.body.classList.remove('bg-particles','bg-parallax'); stopParticles(); },
-        particles: ()=>{ document.body.classList.add('bg-particles'); document.body.classList.remove('bg-gradient','bg-parallax'); startParticles(); },
-        parallax: ()=>{ document.body.classList.add('bg-parallax'); document.body.classList.remove('bg-gradient','bg-particles'); stopParticles(); }
-      };
-
-      // Intersection observer to change backgrounds on entering sections
-      const sections = document.querySelectorAll('section[data-bg]');
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(ent=>{
-          if(ent.isIntersecting){
-            const mode = ent.target.getAttribute('data-bg') || 'none';
-            if(modes[mode]) modes[mode]();
-          }
-        });
-      },{threshold:0.45});
-      sections.forEach(s=>io.observe(s));
-
-      // Also change on nav click
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click',(e)=>{
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if(el){ const mode = el.getAttribute('data-bg')||'none'; if(modes[mode]) modes[mode](); }
-        });
-      });
-
-      // Particle canvas (simple) - lightweight, tuned for mobile
-      let particleCanvas=null, pctx=null, particles=[], rafId=null;
-      function startParticles(){
-        if(particleCanvas) return;
-        particleCanvas = document.createElement('canvas');
-        particleCanvas.className='bg-particles-canvas';
-        particleCanvas.setAttribute('aria-hidden','true');
-        document.body.appendChild(particleCanvas);
-        pctx = particleCanvas.getContext('2d');
-        resizeCanvas();
-        initParticles();
-        rafId = requestAnimationFrame(tickParticles);
-        window.addEventListener('resize',resizeCanvas);
-      }
-      function stopParticles(){
-        if(!particleCanvas) return;
-        cancelAnimationFrame(rafId); rafId=null;
-        window.removeEventListener('resize',resizeCanvas);
-        particleCanvas.remove(); particleCanvas=null; pctx=null; particles=[];
-      }
-      function resizeCanvas(){ if(!particleCanvas) return; particleCanvas.width = window.innerWidth; particleCanvas.height = window.innerHeight; }
-      function initParticles(){
-        particles = [];
-        const count = Math.max(18, Math.floor(window.innerWidth/30));
-        for(let i=0;i<count;i++){ particles.push({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight, vx:(Math.random()-0.5)*0.4, vy:(Math.random()-0.5)*0.4, r:Math.random()*2+1}); }
-      }
-      function tickParticles(){
-        if(!pctx) return;
-        const w = particleCanvas.width, h = particleCanvas.height;
-        pctx.clearRect(0,0,w,h);
-        for(let p of particles){ p.x += p.vx; p.y += p.vy; if(p.x<0)p.x=w; if(p.x>w)p.x=0; if(p.y<0)p.y=h; if(p.y>h)p.y=0; pctx.beginPath(); pctx.fillStyle='rgba(107,140,255,0.12)'; pctx.arc(p.x,p.y,p.r,0,Math.PI*2); pctx.fill(); }
-        rafId = requestAnimationFrame(tickParticles);
-      }
-
-      return {startParticles,stopParticles};
-    }());
-
-    // Simple heatmap canvas thumbnail (for cards)
-    (function(){
-      const canv = document.querySelector('.heatmap-thumb');
-      if(!canv) return; const ctx = canv.getContext('2d');
-      function drawThumb(){
-        const w = canv.width, h = canv.height;
-        const cols=24, rows=12; const cellW = w/cols, cellH = h/rows;
-        for(let r=0;r<rows;r++){
-          for(let c=0;c<cols;c++){
-            const v = Math.sin((c/cols)*Math.PI*2 + r/3) * Math.cos(r/rows * Math.PI) * 0.5 + 0.5;
-            ctx.fillStyle = `rgba(${Math.floor(255*v)},${Math.floor(122*(1-v)+200*v)},${Math.floor(107*(1-v)+139*v)},${0.9})`;
-            ctx.fillRect(c*cellW, r*cellH, cellW+0.5, cellH+0.5);
-          }
-        }
-      }
-      drawThumb();
-    }());
-
-    // Playback canvas for visualization section (synthetic frames)
-    (function(){
-      const canvas = document.getElementById('playback-canvas');
-      const range = document.getElementById('playback-range');
-      const playBtn = document.getElementById('playback-play');
-      if(!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const W = canvas.width, H = canvas.height;
-      let frames = [];
-      // generate synthetic frames (100) with circular heat blobs
-      for(let f=0;f<100;f++){
-        const data = ctx.createImageData(W,H);
-        const cx = W* (0.2 + 0.6*(f/99));
-        const cy = H*0.5;
-        for(let y=0;y<H;y++){
-          for(let x=0;x<W;x++){
-            const dx = x-cx, dy = y-cy; const d = Math.sqrt(dx*dx+dy*dy);
-            const v = Math.max(0, 1 - d/(60 + 40*Math.sin(f/10)));
-            const idx = (y*W + x)*4;
-            data.data[idx] = Math.floor(255 * v * 0.9 + 20*(1-v));
-            data.data[idx+1] = Math.floor(140 * v + 20*(1-v));
-            data.data[idx+2] = Math.floor(60 * (1-v) + 200*v*0.2);
-            data.data[idx+3] = Math.floor(255 * Math.min(1, v + 0.1));
-          }
-        }
-        frames.push(data);
-      }
-      function renderFrame(i){ ctx.putImageData(frames[i%frames.length],0,0); }
-      let playing=false; let raf=null; let idx=0;
-      function loop(){ renderFrame(idx); range.value = idx; idx = (idx+1)%frames.length; raf = requestAnimationFrame(loop); }
-      playBtn.addEventListener('click', ()=>{ if(!playing){ playing=true; playBtn.textContent='Pause'; loop(); } else { playing=false; playBtn.textContent='Play'; cancelAnimationFrame(raf); } });
-      range.addEventListener('input', ()=>{ idx = Number(range.value); renderFrame(idx); });
-      // draw initial
-      renderFrame(0);
-    }());
-
+    }())
   </script>
-
 </body>
 </html>
-
